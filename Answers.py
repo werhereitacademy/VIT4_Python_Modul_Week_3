@@ -32,7 +32,7 @@ while True :
 |           copyright@vit4 group2                 |
 |=================================================| """)
 
-    choise_task= input("Please Enter the a nummer")
+    choise_task= input("Please Enter the a nummer:")
 
     if choise_task == "1":
         add_task()
@@ -47,7 +47,10 @@ while True :
         comp_task()
     
     elif choise_task == "5":
-        break
+         break
+    else:
+        print("Invalid option! Please try again.")
+       
 
         
 
