@@ -1,5 +1,6 @@
-# Project Description: In this assignment, you will create a task manager application using the Python programming 
-# language. This application will allow users to add, complete, delete, and list their tasks.
+print("""Project Description: In this assignment, you will create a task manager 
+application using the Python programming language. This application 
+will allow users to add, complete, delete, and list their tasks.""")
 
 
 
@@ -20,8 +21,8 @@ def statusList_task ():
 
 while True :
     print("""
-|===========Task Management System========[-][o][x]
-|          TASK   M  E  N  U                      | 
+|===========Task Manager Application======[-][o][x]
+|          T A S K   M  E  N  U                   | 
 |   1- Add Task                                   | 
 |   2- completed Task                             | 
 |   3- Delete Task                                | 
