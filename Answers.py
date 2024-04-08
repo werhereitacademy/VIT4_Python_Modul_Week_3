@@ -20,5 +20,37 @@ def statusList_task ():
     return
 
 while True :
+    print("""
+|===========Task Management System========[-][o][x]
+|          TASK   M  E  N  U                      | 
+|   1- Add Task                                   | 
+|   2- completed Task                             | 
+|   3- Delete Task                                | 
+|   4- List Satatus                               | 
+|   5- Exit                                       | 
+|               version 3.02                      |       
+|           copyright@vit4 group2                 |
+|=================================================| """)
+
+    choise_task= input("Please Enter the a nummer")
+
+    if choise_task == "1":
+        add_task()
+
+    elif choise_task == "2":
+        comp_task()
+
+    elif choise_task == "3":
+        del_task()
+
+    elif statusList_task == "4":
+        comp_task()
+    
+    elif choise_task == "5":
+        break
+
+        
+
+
 
     
