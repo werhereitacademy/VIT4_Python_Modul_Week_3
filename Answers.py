@@ -10,8 +10,17 @@ will allow users to add, complete, delete, and list their tasks.""")
 
 task=[]
 
-def add_task ():
-    return
+def add_task(task_name, status="Pending"):
+    if status not in ["Pending", "Completed"]:
+        print("Invalid status!")
+        return
+    task = {
+        "Sequence Number": len(task) + 1,
+        "Task Name": task_name,
+        "Status": status
+    }
+    task.append(task)
+    print("New task added:", task_name, "- Status:", status)
 
 def completed_task ():
     return
@@ -43,7 +52,12 @@ while True :
     choise_task= input("Please Enter the a nummer:")
 
     if choise_task == "1":
-        add_task()
+        task_name = input("Enter the name of the new task: ")
+        status_input = input("Enter the status of the task 'Completed' or 'Pending' (default is 'Pending'): ").capitalize()
+        if status_input:
+            add_task(task_name, status_input)
+        else:
+            add_task(task_name)
 
     elif choise_task == "2":
         comp_task()
