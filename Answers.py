@@ -30,9 +30,10 @@ while True :
 |          T A S K   M  E  N  U                   | 
 |   1- Add Task                                   | 
 |   2- completed Task                             | 
-|   3- Delete Task                                | 
-|   4- List Satatus                               | 
-|   5- Exit                                       | 
+|   3- Delete Task                                |
+|   4- List Completed Task                        | 
+|   5- List Satatus                               | 
+|   6- Exit                                       | 
 |               version 3.02                      |       
 |           copyright@vit4 group2                 |
 |=================================================| """)
@@ -47,11 +48,13 @@ while True :
 
     elif choise_task == "3":
         del_task()
+    elif choise_task == "4":
+        list_completed_task()
 
-    elif statusList_task == "4":
+    elif statusList_task == "5":
         comp_task()
     
-    elif choise_task == "5":
+    elif choise_task == "6":
          break
     else:
         print("Invalid option! Please try again.")
