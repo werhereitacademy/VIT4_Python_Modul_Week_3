@@ -11,10 +11,14 @@ task=[]
 def add_task ():
     return
 
-def comp_task ():
+def completed_task ():
     return
 
 def del_task ():
+ 
+    return
+
+def list_completed_task():
     return
 
 def statusList_task ():
