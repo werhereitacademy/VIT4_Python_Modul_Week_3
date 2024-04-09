@@ -6,7 +6,7 @@ will allow users to add, complete, delete, and list their tasks.""")
 
 
 
-task=[]
+tasks=[]
 
 def add_task(task_name, status="Pending"):
     if status not in ["Pending", "Completed"]:
