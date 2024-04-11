@@ -1,4 +1,3 @@
-#<<<<<<< HEAD
 
 print("""Project Description: In this assignment, you will create a task manager 
 application using the Python programming language. This application 
