@@ -24,7 +24,8 @@ def add_task(task_name, status="Pending"):
 def completed_task ():
     return
 
-def del_task ():
+def delete_task ():
+    
  
     return
 
