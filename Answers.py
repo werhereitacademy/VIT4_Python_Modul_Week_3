@@ -32,7 +32,7 @@ def list_completed_tasks():
 
 
 
-def del_task ():
+def delete_task ():
  
     return
 
@@ -70,7 +70,7 @@ while True :
         comp_task()
 
     elif choise_task == "3":
-        del_task()
+        delete_task()
     elif choise_task == "4":
         list_completed_task()
 
