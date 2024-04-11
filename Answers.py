@@ -7,22 +7,30 @@ will allow users to add, complete, delete, and list their tasks.""")
 
 
 
-task=[]
+tasks=[]
 
 def add_task(task_name, status="Pending"):
     if status not in ["Pending", "Completed"]:
         print("Invalid status!")
         return
     task = {
-        "Sequence Number": len(task) + 1,
+        "Sequence Number": len(tasks) + 1,
         "Task Name": task_name,
         "Status": status
     }
-    task.append(task)
+    tasks.append(task)
     print("New task added:", task_name, "- Status:", status)
 
-def completed_task ():
-    return
+def list_completed_tasks():
+    completed_tasks = [task for task in tasks if task["Status"] == "Completed"]
+    if completed_tasks:
+        print("Completed Tasks:")
+        for index, task in enumerate(completed_tasks, start=1):
+            print(f"{index}. {task['Task Name']}")
+    else:
+        print("No tasks have been completed yet.")
+
+
 
 def del_task ():
  
