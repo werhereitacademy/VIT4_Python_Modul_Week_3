@@ -21,12 +21,20 @@ def add_task(task_name, status="Pending"):
     tasks.append(task)
     print("New task added:", task_name, "- Status:", status)
 
-def completed_task ():
-    return
+def complete_task(task_number):
+    if 0 < task_number <= len(tasks):
+        tasks[task_number - 1]["Status"] = "Completed"
+        print(f"Task {task_number} completed.")
+    else:
+        print("Invalid task number.")
 
-def del_task ():
- 
-    return
+
+def delete_task(task_number):
+    if 0 < task_number <= len(tasks):
+        del tasks[task_number - 1]
+        print(f"Task {task_number} deleted.")
+    else:
+        print("Invalid task number.")
 
 def list_completed_tasks():
     completed_tasks = [task for task in tasks if task["Status"] == "Completed"]
@@ -77,7 +85,9 @@ while True :
         complete_task(task_number)
 
     elif choise_task == "3":
-        del_task()
+        task_number = int(input("Enter the number of the task to delete: "))
+        delete_task(task_number)
+
     elif choise_task == "4":
         list_completed_tasks()
 
@@ -91,11 +101,3 @@ while True :
 
     else:
         print("Invalid option! Please try again.")
-       
-
-        
-
-
-
-    
-
