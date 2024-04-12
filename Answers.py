@@ -34,7 +34,7 @@ def delete_task(task_number):
 def statusList_task ():
     return
 
-def list_all_tasks():
+def list_all_task():
     completed_tasks = [task for task in tasks if task["Status"] == "Completed"]
     if completed_tasks:
         print("Completed Tasks:")
@@ -79,7 +79,7 @@ while True :
         comp_task()
 
     elif choise_task == "5":
-        list_all_tasks()
+        list_all_task()
 
     elif choise_task == "6":
          break
