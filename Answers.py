@@ -21,8 +21,13 @@ def add_task(task_name, status="Pending"):
     tasks.append(task)
     print("New task added:", task_name, "- Status:", status)
 
-def completed_task ():
-    return
+def complete_task(task_number):
+    if 0 < task_number <= len(tasks):
+        tasks[task_number - 1]["Status"] = "Completed"
+        print(f"Task {task_number} completed.")
+    else:
+        print("Invalid task number.")
+
 
 def delete_task(task_number):
     if 0 < task_number <= len(tasks):
@@ -31,10 +36,7 @@ def delete_task(task_number):
     else:
         print("Invalid task number.")
 
-def statusList_task ():
-    return
-
-def list_all_task():
+def list_completed_tasks():
     completed_tasks = [task for task in tasks if task["Status"] == "Completed"]
     if completed_tasks:
         print("Completed Tasks:")
@@ -44,6 +46,16 @@ def list_all_task():
         print("No tasks have been completed yet.")
 
 
+
+def list_all_tasks():
+    if tasks:
+        print("All Tasks:")
+        for index, task in enumerate(tasks, start=1):
+            print(f"{index}. {task['Task Name']} - Status: {task['Status']}")
+    else:
+        print("No tasks have been added yet.")
+
+
 while True :
     print("""
 |===========Task Manager Application======[-][o][x]
@@ -51,8 +63,8 @@ while True :
 |   1- Add Task                                   | 
 |   2- completed Task                             | 
 |   3- Delete Task                                |
-|   4- List Satatus                               | 
-|   5- List Completed Task                        | 
+|   4- List Comleted Tasks                        | 
+|   5- List All Tasks                             | 
 |   6- Exit                                       | 
 |               version 3.02                      |       
 |           copyright@vit4 group2                 |
@@ -69,20 +81,24 @@ while True :
             add_task(task_name)
 
     elif choise_task == "2":
-        comp_task()
+        task_number = int(input("Enter the number of the completed task: "))
+        complete_task(task_number)
 
     elif choise_task == "3":
         task_number = int(input("Enter the number of the task to delete: "))
         delete_task(task_number)
 
     elif choise_task == "4":
-        comp_task()
+        list_completed_tasks()
 
     elif choise_task == "5":
-        list_all_task()
+        list_all_tasks()
 
     elif choise_task == "6":
-         break
+
+        print("Exiting the program...")
+        break
+
     else:
         print("Invalid option! Please try again.")
        
